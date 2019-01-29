@@ -3,11 +3,11 @@ Basically just some code to pick a team from: https://twitter.com/DALLASBRADEN20
 
 Lineups will be selected based on:
 * Career WAR/WAA
-* WAR/WAA per 162games
 * top season
-* average for top 7 seasons (a la JAWS)
+* WAR/WAA per 162games
 * median full season
-* all-defense / all-offense
+* mean for top 7 seasons (inspired by JAWS)
+
 
 All the data here comes from baseball-reference.com ... they're the best
 
