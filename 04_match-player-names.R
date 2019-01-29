@@ -39,3 +39,12 @@ pitcher_name_check %>% filter(is.na(player_ID))
 # combine the two datasets and save to disk
 updated_twitter_lineup <- bind_rows(pitcher_name_check, batter_name_correct)
 updated_twitter_lineup %>% write_csv('twitter_lineup_ids.csv')
+
+# also, let's narrow down the player summary datasets to only keep the ones we want
+batter_summary %>%
+  semi_join(batter_name_correct, by=c('player_ID')) %>% 
+  write_csv('batter_war_in_lineup.csv')
+
+pitcher_summary %>%
+  semi_join(pitcher_name_check, by=c('player_ID')) %>% 
+  write_csv('pitcher_war_in_lineup.csv')
