@@ -10,3 +10,9 @@ all_combis <- twitter_lineup %>%
   spread(position, cost) %>% 
   select(-rownum) %>% 
   expand(`1B`:`RF`)
+
+# gonna take a little thought here
+# also got to think about whether I want to run for all 5^11 possible lineups or exclude "too expensive" options first
+# also for each metric used, some of the more expensive options are going to be excluded
+# ... basically if you score lower than someone cheaper at same position, there's no reason to include you
+# ... each exclusion this way removes ~20% of possible options
